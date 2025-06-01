@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  python-app:
+    container_name: test-second-container
+    build: 
+      context: .
+      target: production
+    environment:
+      - ENV=production
+    command: python app.py
